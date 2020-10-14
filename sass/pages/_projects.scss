@@ -1,0 +1,106 @@
+#projects-section, .projects-section {
+    background-color: $clr-dark-overlay;
+    
+    .proj-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: $grid-gutter;
+        @include mobile-only {
+            grid-template-columns: 1fr;
+        }
+    }
+    .others {
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: space-between;
+        //margin-left: 2rem;
+        @include mobile-only {
+            grid-template-columns: 1fr;
+        }
+
+        .other {
+            width: 13rem;
+            height: 13rem;
+            margin-bottom: 1rem;
+            @include box-shadow($size-shadow, $clr-bg-heading);
+            position: relative;
+            .logos {
+                display: flex;
+                justify-content: space-between;
+            }
+            .proj-body h4 {
+                font-weight: 600;
+            }
+            .proj-foot {
+                position: absolute;
+                bottom: 0;
+                left: 1rem;
+            }
+            &:hover {
+                animation: hover-card 400ms ease-in-out 100ms alternate both;
+            }
+            @include mobile-only {
+                display: block;
+                width: 100%;
+            }
+        }
+    }
+
+    @for $i from 1 through 4 {
+        .proj-prev--#{$i} {
+            position: relative;
+            transform-origin: top left;
+            
+            @if $i == 2 {
+                @include mobile-only {
+                    margin-top: 1.5rem;
+                }    
+            }
+            .card {
+                @include box-shadow($size-shadow, $clr-light);
+            }
+    
+            .back--#{$i} {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+            }
+    
+            &:hover > .front--#{$i} {
+                animation: proj-hidden 800ms ease-in-out both;
+            }
+            &:hover > .back--#{$i} {
+                position: relative;
+                overflow: hidden;
+                animation: hover-card 400ms ease-in-out 100ms alternate both;
+                @include border-nav-foot(bottom, gray);
+                @include border-nav-foot(right, gray);
+                & + .front--#{$i} {
+                    position: absolute;
+                }
+            }
+        }
+    }
+
+    blockquote {
+        font-family: 'Play', sans-serif;
+        font-size: .6rem;
+        opacity: .8;
+    }
+
+    .video {
+        border: 2px solid gray;
+        border-radius: 50px 0px 50px 0px;
+        box-shadow: 6px 6px 6px 6px;
+        background-color: rgb(69, 95, 105);
+        color: #fff;
+
+        & > video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}

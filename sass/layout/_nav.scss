@@ -1,0 +1,4 @@
+.navbar {
+    @include border-nav-foot(bottom, $clr-border-nav-foot);
+    opacity: $opacity-nav-foot;
+}

@@ -1,0 +1,5 @@
+#main-footer, .main-footer {
+    @include border-nav-foot(top, $clr-border-nav-foot);
+    opacity: $opacity-nav-foot;
+    font-family: 'Play', sans-serif;
+}

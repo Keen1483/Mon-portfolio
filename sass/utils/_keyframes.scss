@@ -1,0 +1,26 @@
+@keyframes hover-card {
+    from {
+        transform: translateY(0) translateX(0);
+    }
+    to {
+        transform: translateY(-0.5rem) translateX(-0.5rem);
+    }
+}
+
+@keyframes heading {
+    from {
+        transform: translateY(-2rem);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes proj-hidden {
+    from {
+        transform: rotate(0deg) scale(1);
+    }
+    to {
+        transform: rotate(-190deg) scale(0)
+    }
+}

@@ -1,0 +1,23 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body {
+    color: $clr-txt;
+    background: clr-bg;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Abel', sans-serif;
+    animation: heading 1000ms ease-in-out 150ms both;
+}
+
+.heading {
+    
+}

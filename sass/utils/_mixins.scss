@@ -1,0 +1,13 @@
+@mixin border-nav-foot($position, $clr) {
+    border-#{$position}: 3px solid $clr;
+}
+
+@mixin box-shadow($offset, $clr){
+    box-shadow: $offset $offset lightness-shift($clr);
+}
+
+@mixin mobile-only {
+    @media screen and (max-width: map-get($breakpoints, mobile)) {
+        @content;
+    }
+}

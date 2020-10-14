@@ -1,0 +1,25 @@
+#home-section, .home-section {
+    min-height: 700px;
+    background-size: cover;
+    background-attachment: fixed;
+    @include mobile-only {
+        min-height: 900px;
+    }
+}
+
+#home-section .dark-overlay, .home-section .dark-overlay {
+    background-color: $clr-dark-overlay;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 700px;
+    @include mobile-only {
+        min-height: 900px;
+    }
+}
+
+#home-section .home-inner, .home-section .home-inner {
+    padding-top: 150px;
+    //padding-bottom: 50px;
+}

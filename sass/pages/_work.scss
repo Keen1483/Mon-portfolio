@@ -1,0 +1,26 @@
+#works-section {
+    background-color: $clr-dark-overlay;
+
+    .card {
+        &-l {
+            @include box-shadow($size-shadow, $clr-light);
+        }
+        &-r {
+            margin-left: 3rem;
+            @include box-shadow($size-shadow, $clr-bg-heading);
+        }
+        @include mobile-only {
+            &-l {
+                margin-bottom: 3rem;
+            }
+            &-r {
+                margin-left: 0;
+            }
+        }
+        &:hover {
+            animation: hover-card 400ms ease-in-out 100ms alternate both;
+            @include border-nav-foot(bottom, gray);
+            @include border-nav-foot(right, gray);
+        }
+    }
+}
